@@ -1,3 +1,6 @@
+# daily_reminder.py
+
+# Prompt the user to input their task
 task = input("Enter your task: ")
 
 # Prompt the user to input the priority level of the task
@@ -20,14 +23,11 @@ match priority:
     case _:
         reminder = f"'{task}' has an unspecified priority. Please update the task priority."
 
-# Add time-sensitivity message
+# Modify the reminder based on time sensitivity using an if statement
 if time_bound == "yes":
     reminder += " It requires immediate attention today!"
 else:
     reminder += " Consider completing it when you have free time."
 
 # Print the final reminder
-if priority in ["high", "medium", "low"]:
-    print(f"\nReminder: {reminder}")
-else:
-    print(f"\nNote: {reminder}")
+print(f"\nReminder: {reminder}")
