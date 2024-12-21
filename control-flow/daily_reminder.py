@@ -29,5 +29,5 @@ if time_bound == "yes":
 else:
     reminder += " Consider completing it when you have free time."
 
-# Print the final reminder
-print(f"\nReminder: {reminder}")
+# Print the final reminder in the correct format
+print(f"Reminder: {reminder}")
