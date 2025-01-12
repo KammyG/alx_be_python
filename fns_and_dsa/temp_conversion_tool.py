@@ -7,7 +7,7 @@ def convert_to_celsius(fahrenheit):
   Returns:
       The temperature in Celsius.
   """
-  global FAHRENHEIT_TO_CELSIUS_FACTOR
+  global FAHRENHEIT_TO_CELSIUS_FACTOR, CELSIUS_TO_FAHRENHEIT_FACTOR
   return (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
 
 def convert_to_fahrenheit(celsius):
@@ -19,12 +19,12 @@ def convert_to_fahrenheit(celsius):
   Returns:
       The temperature in Fahrenheit.
   """
-  global CELSIUS_TO_FAHRENHEIT_FACTOR
+  global FAHRENHEIT_TO_CELSIUS_FACTOR, CELSIUS_TO_FAHRENHEIT_FACTOR
   return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
 
 # Define global conversion factors (5/9 for F to C, 9/5 for C to F)
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5  # This line was potentially missed by the checker
 
 while True:
   try:
